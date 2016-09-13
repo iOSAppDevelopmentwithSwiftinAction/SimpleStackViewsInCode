@@ -73,7 +73,7 @@ class ViewController: UIViewController {
     }
     func setiPadLayout() {
         subtitleLabel.isHidden = false
-        if let first = constraints.first where first.isActive {
+        if let first = constraints.first, first.isActive {
             NSLayoutConstraint.deactivate(constraints)
         }
         NSLayoutConstraint.activate(iPadConstraints)
@@ -83,11 +83,11 @@ class ViewController: UIViewController {
     }
     func setOtherLayout() {
         subtitleLabel.isHidden = true
-        if let first = iPadConstraints.first where first.isActive {
+        if let first = iPadConstraints.first, first.isActive {
             NSLayoutConstraint.deactivate(iPadConstraints)
         }
         NSLayoutConstraint.activate(constraints)
-        titleLabel.font = UIFont.preferredFont(forTextStyle: UIFontTextStyleTitle1)
+        titleLabel.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.title1)
         subtitleLabel.font = subtitleLabel.font.withSize(30)
         textView.font = textView.font?.withSize(14)
     }
