@@ -87,7 +87,7 @@ class ViewController: UIViewController {
             NSLayoutConstraint.deactivate(iPadConstraints)
         }
         NSLayoutConstraint.activate(constraints)
-        titleLabel.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.title1)
+        titleLabel.font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.title1)
         subtitleLabel.font = subtitleLabel.font.withSize(30)
         textView.font = textView.font?.withSize(14)
     }
